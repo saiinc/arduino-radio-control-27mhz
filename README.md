@@ -14,4 +14,4 @@ To use an Arduino as a replacement transmitter, connect it to the RF front-end o
 
 This setup allows the Arduino to fully control the RF modulator and transmit correctly encoded command packets without removing the original circuitry.
 
-![RC](cheme.png)
+![RC](cheme.jpg)
