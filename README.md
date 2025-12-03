@@ -6,7 +6,7 @@
 
 To use an Arduino as a replacement transmitter, connect it to the RF front-end of the original remote as follows:
 
-* Arduino signal pin → DATA OUT of the TX-2 / TX-6B encoder before the RF stage
+* Arduino signal pin → DATA OUT of the TX2S encoder before the RF stage.
 
 * Arduino power-control pin → PC (Power Control Output) of the original encoder. This pin powers the RF stage during transmission. Provide the same voltage level that the original chip outputs (typically 2.9–3.3 V). You may connect directly or through a voltage divider if required.
 
