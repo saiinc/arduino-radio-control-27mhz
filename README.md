@@ -2,6 +2,8 @@
 
 ## Arduino-based transmitter for controlling 27 MHz RC toys using TX-2/RX-2 or TX-6B/RX-6B chipsets
 
+The project reproduces the exact modulation pattern used by these chip families, including start frame, data bits, parity, and continuous repeating of packets.
+
 ## Connection Method
 
 To use an Arduino as a replacement transmitter, connect it to the RF front-end of the original remote as follows:
