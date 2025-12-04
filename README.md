@@ -19,3 +19,12 @@ This setup allows the Arduino to fully control the RF modulator and transmit cor
 ![RC](cheme.jpg)
 
 ![RC](tx2s.jpg)
+
+## File TX-2.ino — Arduino transmitter emulator for TX2/RX2 RC toys
+
+This sketch generates the classic TX2/RX2 27 MHz RC control protocol (forward, reverse, left, right and diagonal combinations).
+It creates the correct sequence of long and short pulses expected by RX2-based receivers and drives the RF section of the toy’s original transmitter board.
+
+The sketch supports real-time control via the serial console, allowing you to send commands from a computer
+
+## File TX-6B.ino
