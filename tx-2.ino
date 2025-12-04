@@ -79,4 +79,5 @@ while (Serial.available()) {
   } else {
     delay(10); // чтобы не грузить процессор
   }
+
 }
