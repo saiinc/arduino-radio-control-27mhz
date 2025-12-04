@@ -25,6 +25,20 @@ It creates the correct sequence of long and short pulses expected by RX2-based r
 
 The sketch supports real-time control via the serial console, allowing you to send commands from a computer.
 
+Description of pulse sequences:
+* 4 long pulses (header): each ~1.3ms high and ~0.5ms low signal with 75% duty cycle: ~1.8ms total.
+* N short pulses: each 0.5ms low and 0.5ms low.
+```
+Forward: 10 pulses
+Reverse: 40 pulses
+Right: 64 pulses
+Left: 58 pulses
+Forward/Left: 28 pulses
+Forward/Right: 34 pulses
+Reverse/Left: 52 pulses
+Reverse/Right: 46 pulses
+```
+
 Sample diagram
 ![RC](tx-2.jpg)
 
