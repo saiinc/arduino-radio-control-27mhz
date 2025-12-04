@@ -87,20 +87,6 @@ void setup() {
   Serial.println("Current command: Forward");
 }
 
-// Функция корректной задержки для значений больше 16383 микросекунд
-void accurateDelayMicroseconds(unsigned long us) {
-  const unsigned long MAX_DELAY = 16383;
-  
-  while (us > MAX_DELAY) {
-    delayMicroseconds(MAX_DELAY);
-    us -= MAX_DELAY;
-  }
-  
-  if (us > 0) {
-    delayMicroseconds((unsigned int)us);
-  }
-}
-
 // Функция генерации F1 символа (500 Гц, 75% скважность)
 void sendF1() {
   digitalWrite(TX_PIN, HIGH);
