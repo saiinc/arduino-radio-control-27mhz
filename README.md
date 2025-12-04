@@ -18,7 +18,7 @@ This setup allows the Arduino to fully control the RF modulator and transmit cor
 
 ![RC](cheme.jpg)
 
-## File TX-2.ino — Arduino transmitter emulator for TX2/RX2 RC toys
+## File tx-2.ino — Arduino transmitter emulator for TX2/RX2 RC toys
 
 This sketch generates the classic TX2/RX2 27 MHz RC control protocol (forward, reverse, left, right and diagonal combinations).
 It creates the correct sequence of long and short pulses expected by RX2-based receivers and drives the RF section of the toy’s original transmitter board.
@@ -42,4 +42,39 @@ Reverse/Right: 46 pulses
 Sample diagram
 ![RC](tx-2.jpg)
 
-## File TX-6B.ino
+## File tx-6b.ino - is an Arduino sketch that implements continuous command transmission for the TX-6B radio-controlled toy protocol.
+
+### Main Functions
+- Continuous command transmission until a new command is received
+- Support for commands: forward, backward, right, left, turbo, F1, F2
+- Support for command combinations: forward+turbo, backward+turbo, forward+right, forward+left, backward+right, backward+left
+- Stop command that terminates command transmission
+- Real-time parameter adjustment via Serial port
+
+### Generated Signals
+
+#### Command Structure
+Each command is formed from the following parts:
+
+1. **Start code**: F1 F1 F1 F1 F0
+   - Five start symbols for synchronization
+
+2. **Data**: F B T R L F1 N N F2
+   - F: Forward
+   - B: Backward
+   - T: Turbo
+   - R: Right
+   - L: Left
+   - F1: Additional function 1
+   - N: Unused bits (2 pieces)
+   - F2: Additional function 2
+
+3. **Parity bit**: for ensuring even/odd parity
+4. **End code**: F0 as terminating symbol
+
+#### Frequency Characteristics
+- **F1 symbol**: 500 Hz with 75% duty cycle (1.5 ms HIGH, 0.5 ms LOW)
+- **F0 symbol**: 500 Hz with 25% duty cycle (0.5 ms HIGH, 1.5 ms LOW)
+
+Sample diagram
+![RC](tx-6b.jpg)
