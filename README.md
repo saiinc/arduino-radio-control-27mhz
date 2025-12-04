@@ -42,14 +42,14 @@ Reverse/Right: 46 pulses
 Sample diagram
 ![RC](tx-2.jpg)
 
-## File tx-6b.ino - is an Arduino sketch that implements continuous command transmission for the TX-6B radio-controlled toy protocol.
+## File tx-6b.ino — Arduino transmitter emulator for TX-6B/RX-6B RC toys
 
 ### Main Functions
 - Continuous command transmission until a new command is received
 - Support for commands: forward, backward, right, left, turbo, F1, F2
 - Support for command combinations: forward+turbo, backward+turbo, forward+right, forward+left, backward+right, backward+left
 - Stop command that terminates command transmission
-- Real-time parameter adjustment via Serial port
+- Real-time parameters adjustment via Serial port
 
 ### Generated Signals
 
