@@ -78,3 +78,5 @@ Each command is formed from the following parts:
 
 Sample diagram
 ![RC](tx-6b.jpg)
+
+## File tx6b_button_controlled_with_combinations.ino — same as tx-6b.ino with buttons support
